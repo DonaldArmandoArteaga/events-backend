@@ -1,5 +1,4 @@
 # This workflow will build and push a new container image to Amazon ECR,
-# and then will deploy a new task definition to Amazon ECS, when there is a push to the "main" branch.
 #
 # To use this workflow, you will need to complete the following set-up steps:
 #
@@ -16,9 +15,9 @@ on:
       - "main"
 
 env:
-  AWS_REGION: MY_AWS_REGION                   # set this to your preferred AWS region, e.g. us-west-1
-  ECR_REPOSITORY: MY_ECR_REPOSITORY           # set this to your Amazon ECR repository name
-  CONTAINER_NAME: MY_CONTAINER_NAME           # set this to the name of the container in the containerDefinitions section of your task definition
+  AWS_REGION: us-east-1          
+  ECR_REPOSITORY: events-backend 
+  CONTAINER_NAME: events-backend-container
                                               
 
 permissions:
