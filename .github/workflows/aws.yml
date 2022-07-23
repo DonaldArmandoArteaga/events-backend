@@ -7,7 +7,7 @@
 #    Replace the value of the `ECR_REPOSITORY` environment variable in the workflow below with your repository's name.
 #    Replace the value of the `AWS_REGION` environment variable in the workflow below with your repository's region.
 
-name: Deploy to Amazon ECR Docker image
+name: Push to Amazon ECR Docker image
 
 on:
   push:
@@ -16,7 +16,7 @@ on:
 
 env:
   AWS_REGION: us-east-1          
-  ECR_REPOSITORY: events-backend 
+  ECR_REPOSITORY: o0u3o2v9/events-backend 
   CONTAINER_NAME: events-backend-container
                                               
 
