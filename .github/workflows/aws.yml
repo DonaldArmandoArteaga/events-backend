@@ -45,7 +45,7 @@ jobs:
           ECR_REGISTRY: ${{ steps.login-ecr.outputs.registry }}
           IMAGE_TAG: ${{ github.sha }}
         run: |
-          aws ecr-public get-login-password --region AWS_REGION | docker login --username AWS --password-stdin public.ecr.aws/$ECR_REPOSITORY
+          aws ecr-public get-login-password --region $AWS_REGION | docker login --username AWS --password-stdin public.ecr.aws/$ECR_REPOSITORY
           docker build -t $CONTAINER_NAME .
           docker tag $CONTAINER_NAME:$IMAGE_TAG public.ecr.aws/$ECR_REPOSITORY/$CONTAINER_NAME:$IMAGE_TAG
           docker push public.ecr.aws/$ECR_REPOSITORY/$CONTAINER_NAME:$IMAGE_TAG
