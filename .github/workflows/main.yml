@@ -7,7 +7,7 @@ on:
     branches: ["main"]
 
 jobs:
-  call-workflow-1-in-local-repo:
+  call-nodejs-workflow:
     uses: ./.github/workflows/node.js.yml
-  call-workflow-2-in-local-repo:
+  call-aws-workflow:
     uses: ./.github/workflows/node.js.yml
