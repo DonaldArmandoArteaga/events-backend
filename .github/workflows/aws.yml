@@ -6,6 +6,7 @@ on:
 env:
   ECR_REPOSITORY: o0u3o2v9
   CONTAINER_NAME: events-backend
+  AWS_REGION: us-east-1
 
 permissions:
   contents: read
