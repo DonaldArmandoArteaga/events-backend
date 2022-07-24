@@ -1,0 +1,13 @@
+name: Pipeline Events Backend
+
+on:
+  push:
+    branches: ["main"]
+  pull_request:
+    branches: ["main"]
+
+jobs:
+  call-workflow-1-in-local-repo:
+    uses: ./.github/workflows/node.js.yml
+  call-workflow-2-in-local-repo:
+    uses: ./.github/workflows/node.js.yml
