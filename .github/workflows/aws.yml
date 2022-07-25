@@ -17,6 +17,10 @@ jobs:
     runs-on: ubuntu-latest
     environment: production
 
+    strategy:
+      matrix:
+        node-version: [16.x]
+
     steps:
       - name: Checkout
         uses: actions/checkout@v3
@@ -42,6 +46,7 @@ jobs:
       - name: Build and deploy AWS infrastructure
         id: build-deploy-infrastructure
         run: |
+          npm install -g aws-cdk
           cdk synth
           cdk bootstrap
           cdk deploy
