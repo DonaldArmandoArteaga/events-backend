@@ -46,7 +46,7 @@ jobs:
       - name: Build and deploy AWS infrastructure
         id: build-deploy-infrastructure
         run: |
-          npm install typescript -g
+          npm install -g ts-node
           npm install -g aws-cdk
           cdk synth
           cdk bootstrap
