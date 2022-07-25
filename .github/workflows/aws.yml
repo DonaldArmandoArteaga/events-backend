@@ -47,6 +47,7 @@ jobs:
         id: build-deploy-infrastructure
         run: |
           npm install 
+          npm install -g aws-cdk
           cdk synth
           cdk bootstrap
           cdk deploy
